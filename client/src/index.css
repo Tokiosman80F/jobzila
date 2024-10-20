@@ -1,3 +1,20 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes updown {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.animation-updown{
+    animation: updown 2s ease-in-out infinite;
+}

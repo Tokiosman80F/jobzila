@@ -20,8 +20,8 @@ function Navbar() {
   // Handle scroll to change navbar background
   useEffect(() => {
     const handleScroll = () => {
-      const bannerHeight = document.querySelector(".hero").offsetHeight;
-      setIsScrolled(window.scrollY > bannerHeight);
+      const scrollThreshold = 50; // Change this value as needed
+      setIsScrolled(window.scrollY > scrollThreshold);
     };
 
     window.addEventListener("scroll", handleScroll);

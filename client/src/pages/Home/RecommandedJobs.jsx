@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Heading from "../../utilities/Heading";
-
+import RecommandedJobsSlider from "./RecommandedJobsSlider";
+import "./RecommandedJobsSlider.css"
 const RecommandedJobs = () => {
   return (
     <div className="container mx-auto">
@@ -17,6 +18,7 @@ const RecommandedJobs = () => {
           View All Jobs
         </Link>
       </div>
+      <RecommandedJobsSlider/>
     </div>
   );
 };

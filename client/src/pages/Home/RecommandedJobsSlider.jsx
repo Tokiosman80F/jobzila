@@ -7,61 +7,50 @@ import { FaDatabase } from "react-icons/fa";
 import { FaWordpress } from "react-icons/fa";
 import { FaWix } from "react-icons/fa";
 import { FaNetworkWired } from "react-icons/fa6";
-import { Pagination } from "swiper/modules";
+// import { Autoplay, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-{
-  /* 
-<FaBookOpenReadernReader /> 
-<FaCode /> // fullstack
-<ImAndroid /> //android
-import { FaReact } from "react-icons/fa6"; // frontend
-<FaDatabase/>
-<FaWordpress/>
-<FaxWix/>
-<FaNetworkWired/>
-*/
-}
+import { Autoplay, Pagination } from 'swiper/modules';
 const RecommandedJobsSlider = () => {
   const jobData = [
     {
       id: 1,
-      title: "Fullstack Development",
-      icon: <FaCode size={32} />,
+      title: "Fullstack",
+      icon: <FaCode size={32}  />,
       jobsAvailable: 15,
     },
     {
       id: 2,
-      title: "Android Development",
+      title: "Android ",
       icon: <ImAndroid size={32} />,
       jobsAvailable: 12,
     },
     {
       id: 3,
-      title: "Frontend Development",
+      title: "Frontend ",
       icon: <FaReact size={32} />,
       jobsAvailable: 18,
     },
     {
       id: 4,
-      title: "Database Management",
+      title: "Database",
       icon: <FaDatabase size={32} />,
       jobsAvailable: 10,
     },
     {
       id: 5,
-      title: "WordPress Development",
+      title: "WordPress ",
       icon: <FaWordpress size={32} />,
       jobsAvailable: 8,
     },
     {
       id: 6,
-      title: "Wix Development",
+      title: "Wix",
       icon: <FaWix size={32} />,
       jobsAvailable: 7,
     },
     {
       id: 7,
-      title: "Network Engineering",
+      title: "Network ",
       icon: <FaNetworkWired size={32} />,
       jobsAvailable: 9,
     },
@@ -73,10 +62,14 @@ const RecommandedJobsSlider = () => {
     },
   ];
   return (
-    <div>
+    <div className="my-8">
       <Swiper
         slidesPerView={1}
         spaceBetween={10}
+        autoplay={{
+          delay: 3000, // 3 seconds delay
+          disableOnInteraction: false, // Keep autoplay running even after interaction
+        }}
         pagination={{
           clickable: true,
         }}
@@ -94,15 +87,17 @@ const RecommandedJobsSlider = () => {
             spaceBetween: 50,
           },
         }}
-        modules={[Pagination]}
+        modules={[Pagination,Autoplay]}
         className="mySwiper"
       >
         {jobData.map(job => (
           <SwiperSlide key={job.id}>
-            <div className="flex flex-col px-20 py-15 border-2 justify-start">
-                <div>{job.icon}</div>
-                <div>{job.title}</div>
-                <div>{job.jobsAvailable} jobs</div>
+            <div className="bg-secondary-color  pt-5 pr-5 pb-4 pl-5 rounded ">
+                <div className="flex flex-col gap-4 items-start justify-center">
+                <div className="bg-primary-color text-white p-2 border rounded">{job.icon}</div>
+                <div className="font-semibold">{job.title}</div>
+                <div className="text-primary-color font-medium">{job.jobsAvailable} jobs</div>
+                </div>
             </div>
           </SwiperSlide>
         ))}

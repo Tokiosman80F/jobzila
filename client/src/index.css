@@ -18,3 +18,6 @@
 .animation-updown{
     animation: updown 2s ease-in-out infinite;
 }
+.primary-btn{
+    @apply bg-blue-500 hover:bg-blue-600 text-white px-10 py-3 rounded-md  text-left text-sm md:text-base;
+}

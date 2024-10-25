@@ -1,4 +1,5 @@
 import HeroBanner from "./HeroBanner";
+import JobOfTheDay from "./JobOfTheDay";
 import RecommandedJobs from "./RecommandedJobs";
 
 const Home = () => {
@@ -6,6 +7,7 @@ const Home = () => {
     <>
       <HeroBanner></HeroBanner>
       <RecommandedJobs/>
+      <JobOfTheDay/>
     </>
   );
 };

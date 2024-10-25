@@ -1,6 +1,10 @@
-/* .swiper-pagination-bullets{
-    margin-top: -20px;
-}  */
+.swiper-wrapper{
+  height: 210px;
+  
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal{
+    /* background-color: aquamarine; */
+} 
 .swiper-pagination-bullet {
     width: 10px; /* Adjust the width */
     height: 10px; /* Adjust the height */

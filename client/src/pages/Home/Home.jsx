@@ -1,6 +1,7 @@
 import HeroBanner from "./HeroBanner";
 import JobOfTheDay from "./JobOfTheDay";
 import RecommandedJobs from "./RecommandedJobs";
+import TopCompanies from "./TopCompanies";
 
 const Home = () => {
   return (
@@ -8,6 +9,7 @@ const Home = () => {
       <HeroBanner></HeroBanner>
       <RecommandedJobs/>
       <JobOfTheDay/>
+      <TopCompanies/>
     </>
   );
 };
